@@ -1,0 +1,78 @@
+/* Estilos customizados — CritSave Login */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Painel esquerdo — fundo branco com textura de gelo atrás */
+.painel-esquerdo {
+  background-color: rgba(255, 255, 255, 0.82);
+  border-right: none;
+}
+
+/* Camada branca semi-transparente sobre o painel esquerdo */
+.painel-esquerdo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.painel-esquerdo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('images/EfeitoGelo.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  mix-blend-mode: luminosity;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Efeito gelo no painel direito */
+.painel-direito::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('images/EfeitoGelo.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  mix-blend-mode: luminosity;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glass card */
+.glass-card {
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 40px 27px 27px 27px;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Botão fechar */
+.btn-fechar {
+  border-radius: 0px 15px 0px 15px;
+}
+
+/* Imagem de fundo */
+.fundo-direito {
+  object-position: right center;
+  z-index: 1;
+}
+
+/* Garante que o conteúdo fique acima da textura */
+.glass-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Links verdes */
+.link-verde {
+  color: #02e360;
+}

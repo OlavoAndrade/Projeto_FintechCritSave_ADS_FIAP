@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CritSave — Login</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            'cs-green':       '#017B57',
+            'cs-green-light': '#50D272',
+            'cs-green-dark':  '#17543a',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="font-montserrat bg-white overflow-x-hidden m-0">
+
+  <div class="min-h-screen bg-white flex items-center justify-center px-5 py-10 relative overflow-hidden">
+
+    <!-- Blobs decorativos -->
+    <img
+      src="images/detalhe verde esquerdo.png"
+      alt=""
+      aria-hidden="true"
+      class="fixed bottom-0 left-0 h-screen w-auto max-w-[22vw] object-contain object-left-bottom z-0 pointer-events-none"
+    />
+    <img
+      src="images/detalhe verde direito.png"
+      alt=""
+      aria-hidden="true"
+      class="fixed top-0 right-0 h-screen w-auto max-w-[22vw] object-contain object-right-top z-0 pointer-events-none"
+    />
+
+    <!-- Card principal -->
+    <div class="relative z-10 w-full max-w-5xl
+                flex flex-col md:flex-row
+                rounded-[30px] shadow-[0_25px_50px_rgba(0,0,0,0.25)]
+                overflow-hidden min-h-[580px]">
+
+      <!-- Painel esquerdo -->
+      <div class="painel-esquerdo
+                  md:w-[400px] w-full flex-shrink-0
+                  flex flex-col items-center
+                  px-10 pt-8 pb-9 relative">
+
+        <img
+          src="images/LogoCritSave.png"
+          alt="Logo CritSave"
+          class="relative z-10 w-full max-w-[320px] h-auto object-contain block mx-auto"
+        />
+
+        <div class="relative z-10 w-full flex flex-col items-center gap-3 mt-6">
+          <div class="w-full h-px bg-black"></div>
+          <p class="text-black font-semibold text-center leading-snug
+                    text-lg md:text-xl m-0 break-words">
+            O sucesso crítico que o seu futuro precisa.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Painel direito -->
+      <div class="painel-direito flex-1 relative flex items-center justify-center
+                  px-6 py-8 overflow-hidden bg-transparent">
+
+        <picture>
+          <img
+            src="images/Aventureiros.png"
+            alt=""
+            aria-hidden="true"
+            class="fundo-direito
+                   absolute top-[-20px] right-0 h-[104%] w-auto
+                   object-contain object-right
+                   max-sm:opacity-60"
+          />
+        </picture>
+
+        <!-- Formulário -->
+        <div class="glass-card
+                    relative z-20 w-full max-w-[430px]
+                    border-2 border-black
+                    flex flex-col gap-4
+                    px-7 pb-7">
+
+          <div class="flex justify-end -mr-4 mt-3">
+            <button
+              aria-label="Fechar"
+              class="btn-fechar
+                     w-[49px] h-11
+                     bg-black text-white
+                     font-bold font-montserrat text-base
+                     border-none cursor-pointer">
+              ✕
+            </button>
+          </div>
+
+          <!-- Campo Email -->
+          <div class="flex items-center gap-3 border-b border-black/60 pb-2 pl-2">
+            <img src="images/IconEmail.png" alt="" aria-hidden="true"
+                 class="w-[22px] h-[19px] object-contain flex-shrink-0 mix-blend-multiply" />
+            <input
+              type="email"
+              placeholder="Email"
+              autocomplete="email"
+              aria-label="Email"
+              class="flex-1 min-w-0 bg-transparent border-none outline-none
+                     font-montserrat font-bold text-[15px] text-black/70
+                     placeholder:text-black/50 focus:text-black"
+            />
+          </div>
+
+          <!-- Campo Senha -->
+          <div class="flex items-center gap-3 border-b border-black/60 pb-2 pl-2">
+            <img src="images/IconSenha.png" alt="" aria-hidden="true"
+                 class="w-[22px] h-[22px] object-contain flex-shrink-0 mix-blend-multiply" />
+            <input
+              type="password"
+              placeholder="Senha"
+              autocomplete="current-password"
+              aria-label="Senha"
+              class="flex-1 min-w-0 bg-transparent border-none outline-none
+                     font-montserrat font-bold text-[15px] text-black/70
+                     placeholder:text-black/50 focus:text-black"
+            />
+            <img src="images/IconOlho.png" alt="Mostrar senha"
+                 class="w-[22px] h-[22px] object-contain flex-shrink-0 mix-blend-multiply cursor-pointer mr-2" />
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-2 px-2">
+            <label class="flex items-center gap-2 cursor-pointer ml-2">
+              <input type="checkbox"
+                     class="w-4 h-4 flex-shrink-0 cursor-pointer accent-cs-green" />
+              <span class="text-black font-bold text-sm">Lembrar-me</span>
+            </label>
+            <a href="#" class="link-verde font-bold text-[13px] no-underline hover:underline">
+              Esqueci minha senha
+            </a>
+          </div>
+
+          <button class="w-full h-[50px] min-h-[44px]
+                         bg-white/95 border border-[#0D0A06] rounded-[10px]
+                         font-montserrat font-bold text-base text-[#0D0A06]
+                         cursor-pointer transition-opacity hover:opacity-85">
+            Entrar
+          </button>
+
+          <div class="flex items-center gap-3">
+            <div class="flex-1 h-px bg-white/40"></div>
+            <span class="text-white font-bold text-[13px]">OU</span>
+            <div class="flex-1 h-px bg-white/40"></div>
+          </div>
+
+          <button class="w-full h-[50px] min-h-[44px]
+                         bg-white/95 border border-[#0D0A06] rounded-[10px]
+                         font-montserrat font-bold text-base text-[#0D0A06]
+                         flex items-center justify-center gap-2
+                         cursor-pointer transition-opacity hover:opacity-85">
+            <img src="images/IconGoogle.png" alt="" aria-hidden="true"
+                 class="w-[22px] h-[22px] object-contain" />
+            Continuar com Google
+          </button>
+
+          <div class="flex flex-wrap items-center justify-center gap-1">
+            <span class="text-white font-bold text-sm">Não possui uma conta?</span>
+            <a href="#" class="link-verde font-bold text-sm no-underline hover:underline">
+              Registrar-se
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
